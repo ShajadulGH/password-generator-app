@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background:#f44b42;
+}
+.main-container{
+    width: 450px;
+    background: whitesmoke;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.main-container h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 10px;
+    text-align: center;
+}
+.container{
+    margin: 1.25rem 1.75rem
+}
+.container .input-box{
+    position: relative;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border: 1px solid #aaa;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 20px;
+    letter-spacing: 1.4px;
+    background: none;
+}
+.input-box span{
+    position: absolute;
+    right: 13px;
+    line-height: 50px;
+    color: rgb(133, 133, 133);
+    cursor: pointer;
+}
+.input-box span:hover{
+    color: rgb(0, 0, 0);
+}
+.pass-indicator{
+    width: 100%;
+    background:#cccccc;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 25px;
+    position: relative;
+}
+.pass-indicator::before{
+    width: 50%;
+    background:#f1c80b;
+    position: absolute;
+    height: 100%;
+    content: "";
+    transition: width 0.3s ease;
+}
+.pass-indicator#weak::before{
+    width: 20%;
+    background: #E64A4A;
+  }
+  .pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+  }
+  .pass-indicator#strong::before{
+    width: 100%;
+    background: #007d19;
+  }
+.pass-length{
+    margin: 1.56rem 0 1.25rem;
+  }
+.details{
+    display: flex;
+    justify-content: space-between;
+  }
+.pass-length input{
+    width: 100%;
+    height: 5px;
+  }
+.options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+.option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+.low input{
+    pointer-events: none;
+}
+.option input{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+  }
+.option label{
+    cursor: pointer;
+    color: #4f4f4f;
+    padding-left: 0.63rem;
+  }
+  .generate-btn{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f44b42;
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 0.94rem 0 1.3rem;
+  }
